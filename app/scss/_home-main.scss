@@ -1,0 +1,111 @@
+.features {
+    height: 87.5rem;
+    padding: 0 1.5rem;
+
+    // margin-bottom: 7.5rem;
+    @include media(">=tablet") {
+        padding: 5rem 2.5rem;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    @include media(">=desktop") {
+        display: flex;
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+    }
+
+    .feature {
+        color: $secondary-grey;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include media(">=tablet") {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        @include media(">=desktop") {
+            flex-direction: column;
+            text-align: center;
+
+        }
+
+        &:nth-of-type(1) {
+            @include media(">=desktop") {
+                padding-right: 2.5rem;
+
+            }
+
+            p,
+            h3 {
+                @include media(">=desktop") {
+                    padding-left: 0;
+
+                }
+            }
+        }
+
+        &:nth-of-type(3) {
+            @include media(">=desktop") {
+                padding-left: 2.5rem;
+
+            }
+        }
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            margin-bottom: 5rem;
+
+            @include media(">=desktop") {
+                margin-bottom: 0;
+
+            }
+        }
+
+        &_bgc {
+            min-width: 11.875rem;
+            min-height: 10rem;
+            background-size: contain, contain;
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center;
+
+            @include media('>=desktop') {
+                margin-bottom: 3.125rem;
+            }
+
+        }
+
+        h3,
+        p {
+            margin: 0;
+
+            @include media(">=tablet") {
+                padding-left: 2.5rem;
+            }
+
+            @include media('>=desktop') {
+                padding-left: 0;
+            }
+        }
+
+
+        h3 {
+            padding-top: 3.125rem;
+            padding-bottom: 3.125rem;
+
+            @include media(">=tablet") {
+                padding-top: 0;
+                padding-bottom: 1.875rem;
+            }
+        }
+
+
+
+
+
+    }
+}

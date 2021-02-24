@@ -1,0 +1,25 @@
+.tim-brown {
+    background-image: url(/images/graphic-design/desktop/image-change.jpg);
+}
+
+.boxed-water {
+    background-image: url(/images/graphic-design/desktop/image-boxed-water.jpg);
+}
+
+.science {
+    background-image: url(/images/graphic-design/desktop/image-science.jpg);
+}
+
+#graphic-bgc {
+    background-image: url(/images/home/mobile/image-app-design.jpg);
+
+
+    @include media(">=420px") {
+        background-image: url(/images/home/tablet/image-app-design.jpg);
+        background-position: 50% 50%;
+    }
+
+    @include media('>=desktop') {
+        background-image: url(/images/home/desktop/image-app-design.jpg);
+    }
+}

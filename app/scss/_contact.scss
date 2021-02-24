@@ -1,0 +1,186 @@
+.contact {
+    min-height: 47.5rem;
+    background-color: $primary-peach;
+    padding: 4.5rem 1.5rem;
+    background-image: url(/images/contact/mobile/bg-pattern-hero-contact-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 280%;
+    background-position: 20% 0%;
+
+    @include media('>=mid-phone') {
+        background-image: url(/images/contact/desktop/bg-pattern-hero-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-position: -100% -30%;
+    }
+
+    @include media('>=tablet') {
+        margin: 0 2.5rem;
+        border-radius: 0.9375rem;
+        padding: 4.5rem 3.625rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include media('>=desktop') {
+        min-height: 30rem;
+        flex-direction: row;
+        align-items: center;
+        padding: 3.375rem 6rem;
+        background-size: 60%;
+        background-position: left bottom;
+    }
+
+
+
+
+    &-text {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        @include media('>=tablet') {
+            text-align: left;
+        }
+
+        @include media('>=desktop') {
+            flex: 1;
+            padding-right: 5.625rem;
+        }
+
+        h1,
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 1.875rem;
+
+            @include media('>=tablet') {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+
+        @include media('>=desktop') {
+            flex: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                position: relative;
+
+
+
+                &:hover::after {
+                    opacity: 1;
+                    // border-bottom: 2px solid $primary-white;
+                }
+
+                &::after {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    position: absolute;
+                    top: -15px;
+                    left: 0;
+                    border-bottom: 2px solid $primary-white;
+                    pointer-events: none;
+                    opacity: 0.5;
+                    transition: opacity 0.3s ease-in-out;
+                }
+            }
+
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding-left: 0.9375rem;
+            color: $primary-white;
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            opacity: 1;
+            font-size: 100%;
+
+
+            &:nth-of-type(1) {
+                margin-bottom: 1.875rem;
+            }
+
+        }
+
+        #message {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.875rem;
+        }
+
+        button {
+            align-self: center;
+            padding: 1.125rem 3rem;
+            text-transform: uppercase;
+            color: $secondary-grey;
+            background-color: $primary-white;
+            border-radius: .5rem;
+            font-weight: 500;
+            transition: background-color .2s ease-in, color .3s ease-in;
+            border: none;
+            font-family: 'Jost', sans-serif;
+            line-height: 1.5625rem;
+            cursor: pointer;
+            font-size: 100%;
+            letter-spacing: 1px;
+            margin-top: 1.5625rem;
+
+            @include media('>=tablet') {
+                align-self: flex-end;
+            }
+
+            @include media(">=tablet") {
+                &:hover {
+                    background-color: $secondary-peach;
+                    color: $primary-white;
+                }
+            }
+
+        }
+
+        ::placeholder {
+            color: $primary-white;
+            font-weight: 500;
+            font-size: 100%;
+            font-family: 'Jost', sans-serif;
+            opacity: 0.6;
+            color: $primary-white;
+        }
+
+        :required {
+            background: transparent;
+            border: none;
+        }
+    }
+}
+
+.contact-footer {
+    padding: 3.125rem 1.5rem;
+
+    @include media('>=tablet') {
+        padding: 6.25rem 2.5rem;
+    }
+}
+
+.contact-cloud {
+    top: 67%;
+    transform: rotateZ(0);
+}

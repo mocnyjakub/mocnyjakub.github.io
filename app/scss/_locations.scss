@@ -1,0 +1,199 @@
+.locations {
+    @include media('>=desktop') {
+        margin-top: 2.5rem;
+    }
+
+    .location {
+        min-height: 45rem;
+        display: flex;
+        flex-direction: column;
+
+
+        @include media('>=tablet') {
+            margin: 0 2.5rem;
+        }
+
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+
+            @include media('>=tablet') {
+                margin-bottom: 7.5rem;
+            }
+
+            @include media('>=desktop') {
+                margin-bottom: 1.875rem;
+            }
+
+        }
+
+        @include media('>=desktop') {
+            flex-direction: row;
+            min-height: 20.625rem;
+        }
+
+        &-bgc {
+            min-height: 20rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            @include media('>=tablet') {
+                border-radius: 0.9375rem;
+                overflow: hidden;
+                margin-bottom: 1.875rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+            }
+
+            @include media('>=desktop') {
+                width: 21.875rem;
+                margin-bottom: 0;
+            }
+        }
+
+        &-canada {
+            background-image: url(/images/locations/tablet/image-map-canada.png);
+            background-position: right;
+
+            @include media('>=desktop') {
+                background-image: url(/images/locations/desktop/image-map-canada.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+
+        }
+
+        &-australia {
+            background-image: url(/images/locations/tablet/image-map-australia.png);
+
+            @include media('>=desktop') {
+                background-image: url(/images/locations/desktop/image-map-australia.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+
+        }
+
+        &-uk {
+            background-image: url(/images/locations/tablet/image-map-uk.png);
+
+            @include media('>=desktop') {
+                background-image: url(/images/locations/desktop/image-map-united-kingdom.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+
+        }
+
+        &-text {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-evenly;
+            color: $secondary-grey;
+            background-color: #FDF3F0;
+            padding: 2.5rem 0;
+            background-image: url(/images/shared/desktop/bg-pattern-three-circles.svg);
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: left top;
+
+            @include media('>=mid-phone') {
+                background-image: url(/images/shared/desktop/bg-pattern-two-circles.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: left;
+
+            }
+
+            @include media('>=tablet') {
+                border-radius: 0.9375rem;
+                overflow: hidden;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                align-items: flex-start;
+                text-align: left;
+                padding: 2.5rem 5rem;
+                background-size: 86%;
+                background-position: left bottom;
+
+            }
+
+            @include media('>=desktop') {}
+
+            &-wrapper {
+                @include media('>=tablet') {
+                    display: flex;
+                }
+            }
+
+            h1,
+            p {
+                margin: 0;
+            }
+
+            h1 {
+                color: #E7816B;
+
+                @include media('>=tablet') {
+                    font-size: 2.5rem;
+                }
+            }
+
+            &-office {
+                margin-bottom: 1.875rem;
+
+                p:nth-of-type(1) {
+                    font-weight: 500;
+                    color: $primary-black;
+                }
+
+                @include media('>=tablet') {
+                    margin-bottom: 0;
+                    margin-right: 3.75rem;
+                }
+
+                @include media('>=desktop') {
+                    margin-right: 5.625rem;
+                }
+            }
+
+            &-contact {
+                p:nth-of-type(1) {
+                    font-weight: 500;
+                    color: $primary-black;
+                }
+            }
+        }
+
+        .text-canada,
+        .text-uk {
+            @include media('>=desktop') {
+                order: -1;
+                margin-right: 1.875rem;
+            }
+        }
+
+        .text-australia {
+            @include media('>=desktop') {
+                margin-left: 1.875rem;
+            }
+        }
+
+
+
+
+
+
+
+
+    }
+}

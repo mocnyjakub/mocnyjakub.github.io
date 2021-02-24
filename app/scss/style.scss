@@ -1,0 +1,36 @@
+// Globals
+@import 'include-media';
+@import 'variables';
+@import 'globals';
+@import 'overflow';
+@import 'header';
+@import 'design-cta-global';
+@import 'footer-cta';
+@import 'footer';
+
+// Home
+@import 'home-cta';
+@import 'home-main';
+
+// Design Sections
+@import 'design-label';
+@import 'design-cards';
+@import 'design-cta';
+
+// App
+@import 'app';
+
+// Graphic
+@import 'graphic';
+
+// About
+@import 'about-main';
+@import 'about-talent';
+@import 'about-cities';
+@import 'about-deal';
+
+//Locations
+@import 'locations';
+
+//Contact
+@import 'contact';

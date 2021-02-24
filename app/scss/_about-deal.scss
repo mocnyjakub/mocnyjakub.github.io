@@ -1,0 +1,28 @@
+#deal-bgc {
+    background-image: url(/images/about/mobile/image-real-deal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    @include media('>=mid-phone') {
+        background-image: url(/images/about/tablet/image-real-deal.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    @include media('>=desktop') {
+        background-image: url(/images/about/desktop/image-real-deal.jpg);
+        order: 2;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+#deal-text::after {
+    transform: rotateZ(180deg);
+}
+
+.about-cloud-2 {
+    top: 57%
+}

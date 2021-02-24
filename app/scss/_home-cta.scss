@@ -1,0 +1,85 @@
+.cta {
+    height: 53.125rem;
+    background-color: $primary-peach;
+    text-align: center;
+    background-image:
+        url(/images/home/desktop/image-hero-phone.png), url(/images/home/desktop/bg-pattern-hero-home.svg);
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: center -535%, center left;
+
+    @include media(">=tablet") {
+        margin: 0 2.5rem;
+        border-radius: 0.9375rem;
+    }
+
+    @include media(">=mid-phone") {
+        background-position: center -535%, center right;
+    }
+
+    @include media(">=desktop") {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        height: 40rem;
+        background-position: 115% 10%, center right;
+    }
+
+
+
+    &_text {
+        padding-top: 5rem;
+
+        @include media(">=tablet") {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include media(">=desktop") {
+            width: 80%;
+            text-align: left;
+            align-items: flex-start;
+            padding-left: 6.25rem;
+            padding-top: 0;
+            padding-right: 0;
+        }
+
+        h1,
+        p {
+            margin: 0;
+            padding-bottom: 1.875rem;
+
+            @include media(">=tablet") {
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        h1 {
+            @include media(">=tablet") {
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+                width: 75%;
+            }
+
+            @include media(">=desktop") {
+                font-size: 3rem;
+                line-height: 3rem;
+                width: 56%;
+            }
+        }
+
+        p {
+            @include media(">=tablet") {
+                width: 60%;
+            }
+
+            @include media(">=desktop") {
+                width: 50%;
+            }
+        }
+
+    }
+}

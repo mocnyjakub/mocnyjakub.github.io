@@ -1,0 +1,39 @@
+.last-card {
+    @include media('>=desktop') {
+        margin: 0 auto 0 5%;
+    }
+}
+
+.airfilter {
+    background-image: url(/images/app-design/desktop/image-airfilter.jpg);
+}
+
+.eyecam {
+    background-image: url(/images/app-design/desktop/image-eyecam.jpg);
+}
+
+.faceit {
+    background-image: url(/images/app-design/desktop/image-faceit.jpg);
+}
+
+.todo {
+    background-image: url(/images/app-design/desktop/image-todo.jpg);
+}
+
+.loopstudios {
+    background-image: url(/images/app-design/desktop/image-loopstudios.jpg);
+}
+
+#web-bgc {
+    background-image: url(/images/home/mobile/image-web-design.jpg);
+
+
+    @include media(">=420px") {
+        background-image: url(/images/home/tablet/image-web-design.jpg);
+        background-position: 50% 50%;
+    }
+
+    @include media('>=desktop') {
+        background-image: url(/images/home/desktop/image-web-design-large.jpg);
+    }
+}

@@ -1,0 +1,44 @@
+.overflow {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+
+
+    @include media ('>=tablet') {
+        display: none;
+    }
+
+    &_text {
+        position: absolute;
+        height: 26rem;
+        width: 100%;
+        padding: 3.125rem 1.5rem;
+        background-color: $primary-black;
+
+        @include media ('>=mid-phone') {
+            padding: 6.250rem 3rem;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $primary-white;
+            font-size: 1.5rem;
+        }
+
+        a:nth-of-type(2) {
+            margin: 2rem 0;
+        }
+    }
+}
+
+.appear {
+    transform: translateX(0);
+}

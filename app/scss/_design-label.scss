@@ -1,0 +1,45 @@
+.design-label {
+    min-height: 20rem;
+    background-color: $primary-peach;
+    margin-bottom: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/shared/desktop/bg-pattern-small-circle.svg);
+    background-repeat: no-repeat;
+    background-position: 45px 0;
+    background-size: 125%;
+
+    @include media('>=tablet') {
+        margin: 1.875rem 2.5rem 9.375rem;
+        min-height: 15.625rem;
+        border-radius: 0.9375rem;
+        background-image: url(/images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg);
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+
+
+
+
+    &-text {
+        padding: 0 1.5rem;
+        text-align: center;
+
+        h1 {
+            @include media('>=mid-phone') {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+        }
+
+        p {
+            @include media('>=mid-phone') {
+                width: 80%;
+                margin: auto;
+
+            }
+        }
+    }
+}
