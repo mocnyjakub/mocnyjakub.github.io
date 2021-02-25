@@ -6,13 +6,28 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    // transition: transform 0.3s ease-in-out;
     z-index: 2;
+    //zmiany
+    display: none;
+    animation: over-animation .3s ease-in-out;
 
 
-    @include media ('>=tablet') {
-        display: none;
+
+    @keyframes over-animation {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
+
+
+
 
     &_text {
         position: absolute;
@@ -41,4 +56,11 @@
 
 .appear {
     transform: translateX(0);
+    display: block;
+
+    @include media ('>=tablet') {
+        display: none;
+    }
+
+
 }

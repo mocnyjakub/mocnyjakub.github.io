@@ -18,14 +18,13 @@ body {
   font-weight: 400;
   color: #FfffFF;
   overflow-x: hidden;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
 .no-scroll {
   overflow: hidden;
   height: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -164,13 +163,19 @@ a.button {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
   z-index: 2;
+  display: none;
+  animation: over-animation .3s ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .overflow {
-    display: none;
+@keyframes over-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -202,6 +207,13 @@ a.button {
 
 .appear {
   transform: translateX(0);
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .appear {
+    display: none;
+  }
 }
 
 .header {

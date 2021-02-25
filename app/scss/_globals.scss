@@ -18,8 +18,8 @@ body {
     font-weight: 400;
     color: $primary-white;
     overflow-x: hidden;
-    width: 100%;
-    height: 100%;
+    // max-width: 100%;
+    // height: 100%;
     position: relative;
 
 }
@@ -28,7 +28,7 @@ body {
 .no-scroll {
     overflow: hidden;
     height: 100%;
-    // width: 100%;
+    max-width: 100%;
 
     @include media(">=tablet") {
         overflow: auto;
