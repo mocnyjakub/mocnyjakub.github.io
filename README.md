@@ -1,1 +1,0 @@
-# mocnyjakub.github.io

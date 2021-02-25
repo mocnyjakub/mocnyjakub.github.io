@@ -18,6 +18,8 @@ body {
   font-weight: 400;
   color: #FfffFF;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
